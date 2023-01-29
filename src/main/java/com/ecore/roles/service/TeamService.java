@@ -1,11 +1,10 @@
 package com.ecore.roles.service;
 
-import com.ecore.roles.client.model.Team;
-
 import java.util.List;
 import java.util.UUID;
+import com.ecore.roles.client.model.Team;
 
-public interface TeamsService {
+public interface TeamService {
 
     Team getTeam(UUID id);
 

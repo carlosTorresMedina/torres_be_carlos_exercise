@@ -1,8 +1,8 @@
 package com.ecore.roles.service;
 
-import com.ecore.roles.client.TeamsClient;
+import com.ecore.roles.client.TeamRestClient;
 import com.ecore.roles.client.model.Team;
-import com.ecore.roles.service.impl.TeamsServiceImpl;
+import com.ecore.roles.service.impl.TeamServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -17,12 +17,12 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-class TeamsServiceTest {
+class TeamServiceTest {
 
     @InjectMocks
-    private TeamsServiceImpl TeamsService;
+    private TeamServiceImpl TeamsService;
     @Mock
-    private TeamsClient TeamsClient;
+    private TeamRestClient TeamsClient;
 
     @Test
     void shouldGetTeamWhenTeamIdExists() {

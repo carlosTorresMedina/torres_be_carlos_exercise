@@ -16,12 +16,12 @@ import java.util.UUID;
 
 import static java.util.Optional.ofNullable;
 
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @Builder
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class MembershipDto {
 
     @JsonProperty

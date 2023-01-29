@@ -1,8 +1,8 @@
 package com.ecore.roles.service;
 
-import com.ecore.roles.client.UsersClient;
+import com.ecore.roles.client.UserRestClient;
 import com.ecore.roles.client.model.User;
-import com.ecore.roles.service.impl.UsersServiceImpl;
+import com.ecore.roles.service.impl.UserServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -17,12 +17,12 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-class UsersServiceTest {
+class UserServiceTest {
 
     @InjectMocks
-    private UsersServiceImpl usersService;
+    private UserServiceImpl usersService;
     @Mock
-    private UsersClient usersClient;
+    private UserRestClient usersClient;
 
     @Test
     void shouldGetUserWhenUserIdExists() {

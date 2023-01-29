@@ -1,7 +1,7 @@
 package com.ecore.roles.web.rest;
 
-import com.ecore.roles.service.TeamsService;
-import com.ecore.roles.web.TeamsApi;
+import com.ecore.roles.service.TeamService;
+import com.ecore.roles.web.TeamApi;
 import com.ecore.roles.web.dto.TeamDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -19,9 +19,9 @@ import static com.ecore.roles.web.dto.TeamDto.fromModel;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping(value = "/v1/teams")
-public class TeamsRestController implements TeamsApi {
+public class TeamRestController implements TeamApi {
 
-    private final TeamsService teamsService;
+    private final TeamService teamsService;
 
     @Override
     @PostMapping(

@@ -1,5 +1,10 @@
 package com.ecore.roles.utils;
 
+import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.when;
+import static io.restassured.http.ContentType.JSON;
+import java.util.UUID;
+import org.hamcrest.Matchers;
 import com.ecore.roles.model.Membership;
 import com.ecore.roles.model.Role;
 import com.ecore.roles.web.dto.MembershipDto;
@@ -10,13 +15,6 @@ import io.restassured.response.ExtractableResponse;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
-import org.hamcrest.Matchers;
-
-import java.util.UUID;
-
-import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.when;
-import static io.restassured.http.ContentType.JSON;
 
 public class RestAssuredHelper {
 
@@ -54,7 +52,7 @@ public class RestAssuredHelper {
 
     public static EcoreValidatableResponse getRole(UUID userId, UUID teamId) {
         return sendRequest(given()
-                .queryParam("teamMemberId", userId)
+                .queryParam("userId", userId)
                 .queryParam("teamId", teamId)
                 .when()
                 .get("/v1/roles/search")

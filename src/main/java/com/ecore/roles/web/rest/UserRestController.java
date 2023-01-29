@@ -1,7 +1,7 @@
 package com.ecore.roles.web.rest;
 
-import com.ecore.roles.service.UsersService;
-import com.ecore.roles.web.UsersApi;
+import com.ecore.roles.service.UserService;
+import com.ecore.roles.web.UserApi;
 import com.ecore.roles.web.dto.UserDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -19,9 +19,9 @@ import static com.ecore.roles.web.dto.UserDto.fromModel;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping(value = "/v1/users")
-public class UsersRestController implements UsersApi {
+public class UserRestController implements UserApi {
 
-    private final UsersService usersService;
+    private final UserService usersService;
 
     @Override
     @PostMapping(
